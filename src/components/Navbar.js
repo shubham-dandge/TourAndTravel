@@ -1,7 +1,8 @@
 import { Component } from "react";
 import "./NavbarStyles.css";
 import { MenuItems } from "./MenuItems";
-// 1-1-36
+import { Link } from "react-router-dom";
+// 1-42-26
 class Navbar extends Component {
   state = {clicked: false};
   handleClick = () => {
@@ -14,14 +15,14 @@ class Navbar extends Component {
         <div className="menu-icons" onClick={this.handleClick}>
           <i className={this.state.clicked ? "fas fa-times" : "fas fa-bars"}></i>
         </div>
-        <ul className="nav-menu">
+        <ul className= {this.state.clicked ? "nav-menu active" : "nav-menu"}>
           {MenuItems.map((item, index) => {
             return (
               <li key={index}>
-                <a className={item.cName} href="/">
+                <Link className={item.cName} to={item.url}>
                   <i className={item.icon}></i>
                   {item.title}
-                </a>
+                </Link>
               </li>
             );
           })}
