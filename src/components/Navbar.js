@@ -2,7 +2,7 @@ import { Component } from "react";
 import "./NavbarStyles.css";
 import { MenuItems } from "./MenuItems";
 import { Link } from "react-router-dom";
-// 1-42-26
+// 1-47-30
 class Navbar extends Component {
   state = {clicked: false};
   handleClick = () => {
