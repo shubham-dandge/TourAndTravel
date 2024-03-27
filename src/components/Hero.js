@@ -1,5 +1,5 @@
 import "./HeroStyles.css";
-
+import yz from "../Assets/group.jpeg"
 function Hero(props) {
   return (
     <>

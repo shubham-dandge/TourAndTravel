@@ -1,12 +1,17 @@
+import Hero from "../components/Hero";
 import Navbar from "../components/Navbar";
-
-function About(){
-    return(
-         <>
-         <Navbar/>
-         <h1>This is About</h1>
-         </>
-    )
-
+import AboutImg from "../Assets/2.jfif"
+function About() {
+  return (
+    <>
+      <Navbar />
+      <Hero
+        cName="hero-mid"
+        heroImg= {AboutImg}
+        title="Dassault Systemes"
+        btnClass="hide"
+      />
+    </>
+  );
 }
 export default About;
